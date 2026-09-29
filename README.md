@@ -1,8 +1,8 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&pause=1000&color=FFFFFF&center=true&vCenter=true&width=1000&lines=Hey%2C+I'm+Jimmiy!;Developer+from+Uzbekistan;Building+fast+%E2%80%A2+Stripping+bloat;Zero-bloat+minimalist.)](https://git.io/typing-svg)
+<div align="center">
 
 <img src="https://xs338.xuss.us/banner.jpg" width="100%" />
 
-<br>
+<br/>
 
 <p align="center">
   <a href="https://xs338.xuss.us" target="_blank">
@@ -16,24 +16,15 @@
   </a>
 </p>
 
-<br>
+</div>
 
 ---
 
-<img src="https://xs338.xuss.us/avatar.png" width="180" align="left" style="margin-right: 25px; margin-bottom: 20px; border-radius: 16px;" />
-
-<br/>
-
 - 15 y.o. software & systems developer based in Uzbekistan
-- focus on high-performance backend, CLI tools and low-latency neural inference
-- stripping away software bloat so everything runs instant, minimal and deliberate
+- focus on low-latency systems, CLI utilities, and zero-bloat software
 - upstream contributor to [wkentaro/gdown](https://github.com/wkentaro/gdown) (PR #532)
 - building [DriveBlast](https://github.com/jimi18102010-commits/Driveblast) & [FaceBlast](https://github.com/jimi18102010-commits/faceblast)
-- i got a site: [xs338.xuss.us](https://xs338.xuss.us)
-
-<br/>
-<br/>
-<br/>
+- site: [xs338.xuss.us](https://xs338.xuss.us)
 
 ---
 
@@ -46,7 +37,6 @@
   <img src="https://img.shields.io/badge/ONNX-1E242A?style=for-the-badge&logo=onnx&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-1E242A?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-1E242A?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Nginx-1E242A?style=for-the-badge&logo=nginx&logoColor=white" />
   <img src="https://img.shields.io/badge/Debian-1E242A?style=for-the-badge&logo=debian&logoColor=white" />
 </p>
 
