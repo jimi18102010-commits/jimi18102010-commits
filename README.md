@@ -1,51 +1,63 @@
-<div align="center">
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&pause=1000&color=FFFFFF&center=true&vCenter=true&width=1000&lines=Hey%2C+I'm+Jimmiy!;Developer+from+Uzbekistan;Building+fast+%E2%80%A2+Stripping+bloat;Zero-bloat+minimalist.)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&pause=1000&color=DC2626&center=true&vCenter=true&width=1000&lines=Hey%2C+I'm+Jimmiy!;Systems+%26+Low-Latency+Developer;Stripping+away+software+bloat;Zero-Bloat+Minimalist.)](https://git.io/typing-svg)
+<img src="https://xs338.xuss.us/banner.jpg" width="100%" />
 
-<img src="https://xs338.xuss.us/banner.jpg" width="100%" alt="Jimmiy - Systems Architect" style="border-radius: 12px;" />
-
-<br/><br/>
+<br>
 
 <p align="center">
   <a href="https://xs338.xuss.us" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-08080A?style=for-the-badge&logo=safari&logoColor=DC2626" />
+    <img src="https://img.shields.io/badge/Portfolio-1E242A?style=for-the-badge&logo=safari&logoColor=white" />
   </a>
   <a href="https://t.me/jimmiy_dev" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-08080A?style=for-the-badge&logo=telegram&logoColor=white" />
+    <img src="https://img.shields.io/badge/Telegram-1E242A?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
   <a href="https://x.com/jimmiy_dev" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter%20%2F%20X-08080A?style=for-the-badge&logo=x&logoColor=white" />
+    <img src="https://img.shields.io/badge/Twitter-1E242A?style=for-the-badge&logo=x&logoColor=white" />
   </a>
 </p>
 
-</div>
+<br>
 
 ---
 
-### 🩸 About Me
+<img src="https://xs338.xuss.us/avatar.png" width="180" align="left" style="margin-right: 25px; margin-bottom: 20px; border-radius: 16px;" />
 
-- 15 y.o. systems & software developer based in **Uzbekistan** 🇺🇿
-- I engineer high-performance backend tools, low-latency CLI utilities, and neural inference pipelines.
-- Zero tolerance for software bloat and sluggish runtimes — everything is built deterministic, instant, and clean.
-- **Upstream Contributor:** Core patch on [`wkentaro/gdown`](https://github.com/wkentaro/gdown/pull/532) (5.5k ⭐).
-- **Active Projects:** [`DriveBlast`](https://github.com/jimi18102010-commits/Driveblast) (chunked HTTP 206 downloader), [`FaceBlast`](https://github.com/jimi18102010-commits/faceblast) (15ms ONNX neural engine).
-- Personal website: **[xs338.xuss.us](https://xs338.xuss.us)**
+<br/>
 
-> *"The world feels boring and bloated when people forget craft. I build software to eliminate inefficiency, sculpt raw logic, and engineer things until they are flawless."*
+- 15 y.o. software & systems developer based in Uzbekistan
+- focus on high-performance backend, CLI tools and low-latency neural inference
+- stripping away software bloat so everything runs instant, minimal and deliberate
+- upstream contributor to [wkentaro/gdown](https://github.com/wkentaro/gdown) (PR #532)
+- building [DriveBlast](https://github.com/jimi18102010-commits/Driveblast) & [FaceBlast](https://github.com/jimi18102010-commits/faceblast)
+- i got a site: [xs338.xuss.us](https://xs338.xuss.us)
+
+<br/>
+<br/>
+<br/>
 
 ---
 
-### ⚙️ Technical Arsenal
+<br/>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python_3.12+-08080A?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/ONNX_Runtime-08080A?style=for-the-badge&logo=onnx&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Linux_Debian-08080A?style=for-the-badge&logo=debian&logoColor=white" />
-  <img src="https://img.shields.io/badge/HTTP_Sockets_206-08080A?style=for-the-badge&logo=fastapi&logoColor=DC2626" />
-  <img src="https://img.shields.io/badge/Git_Upstream-08080A?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/Reverse_Engineering-08080A?style=for-the-badge&logo=wireshark&logoColor=DC2626" />
+  <img src="https://img.shields.io/badge/Python-1E242A?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-1E242A?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/ONNX-1E242A?style=for-the-badge&logo=onnx&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-1E242A?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-1E242A?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nginx-1E242A?style=for-the-badge&logo=nginx&logoColor=white" />
+  <img src="https://img.shields.io/badge/Debian-1E242A?style=for-the-badge&logo=debian&logoColor=white" />
 </p>
+
+<br/>
 
 ---
 
 <div align="center">
+
+<h2>Visitor Count:</h2>
+
+![Visitor Count](https://count.getloli.com/@jimi18102010-commits?name=jimi18102010-commits&theme=3d-num&padding=16&offset=0&align=center&scale=1.3&pixelated=1&darkmode=auto)
+
+</div>
