@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://xs338.xuss.us/banner.jpg" width="100%" />
+<img src="https://xs338.xuss.us/mullvad-banner.jpg?v=2" width="100%" />
 
 <br/>
 
