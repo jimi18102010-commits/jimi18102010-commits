@@ -60,20 +60,6 @@ def generate_stats_svg():
 
 def generate_languages_svg():
     return '''<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="headlightGlow" cx="95%" cy="100%" r="60%">
-      <stop offset="0%" stop-color="#fff570" stop-opacity="0.32"/>
-      <stop offset="35%" stop-color="#fbc02d" stop-opacity="0.14"/>
-      <stop offset="70%" stop-color="#ffa000" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#ffa000" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="borderGlow" x1="330" y1="195" x2="440" y2="150" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#30363d" stop-opacity="0"/>
-      <stop offset="60%" stop-color="#fdd835" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#ffd54f" stop-opacity="0.2"/>
-    </linearGradient>
-  </defs>
-
   <style>
     .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
     .lang-name { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
@@ -82,10 +68,6 @@ def generate_languages_svg():
 
   <!-- Card Background -->
   <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
-  
-  <!-- Subtle warm headlight beam illumination from mole below -->
-  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="url(#headlightGlow)"/>
-  <path d="M 330,194.5 L 431.5,194.5 A 8 8 0 0 0 439.5,186.5 L 439.5,130" stroke="url(#borderGlow)" stroke-width="1.8" fill="none"/>
 
   <!-- Title -->
   <text x="24" y="34" class="header">Most Used Languages</text>
