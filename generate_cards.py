@@ -1,0 +1,119 @@
+# Generate pixel-perfect GitHub Stats and Most Used Languages cards
+# matching the exact aesthetic of Rafaella Ballerini's profile (Dracula / Dark Cyberpunk theme)
+
+def generate_stats_svg():
+    return '''<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
+    .stat-label { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
+    .stat-val { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f1fa8c; }
+    .icon { fill: #8be9fd; }
+    .rank-text { font: 800 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; text-anchor: middle; dominant-baseline: central; }
+    .rank-sub { font: 600 10px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #50fa7b; text-anchor: middle; }
+    .circle-bg { stroke: #282a36; stroke-width: 5; fill: none; }
+    .circle-fill { stroke: #ff79c6; stroke-width: 5; fill: none; stroke-linecap: round; stroke-dasharray: 220; stroke-dashoffset: 20; animation: rank 1.5s ease-out forwards; }
+    @keyframes rank { from { stroke-dashoffset: 220; } to { stroke-dashoffset: 20; } }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+
+  <!-- Title -->
+  <text x="24" y="34" class="header">Jimmiy's GitHub Stats</text>
+
+  <!-- Stats Rows -->
+  <g transform="translate(24, 58)">
+    <!-- Stars -->
+    <svg class="icon" x="0" y="0" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+    <text x="24" y="13" class="stat-label">Total Stars Earned:</text>
+    <text x="175" y="13" class="stat-val">12</text>
+
+    <!-- Commits -->
+    <svg class="icon" x="0" y="26" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm8-6a6 6 0 100 12A6 6 0 008 2z"/></svg>
+    <text x="24" y="39" class="stat-label">Total Commits:</text>
+    <text x="175" y="39" class="stat-val">142</text>
+
+    <!-- PRs -->
+    <svg class="icon" x="0" y="52" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.256a2.251 2.251 0 101.5 0V5a2.5 2.5 0 00-2.5-2.5z"/></svg>
+    <text x="24" y="65" class="stat-label">Total PRs Merged/Open:</text>
+    <text x="175" y="65" class="stat-val">4</text>
+
+    <!-- Upstream Contributed To -->
+    <svg class="icon" x="0" y="78" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8V1.5z"/></svg>
+    <text x="24" y="91" class="stat-label">Upstream Repos:</text>
+    <text x="175" y="91" class="stat-val">2 (17k ⭐)</text>
+
+    <!-- Age badge -->
+    <svg class="icon" x="0" y="104" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
+    <text x="24" y="117" class="stat-label">Developer Age:</text>
+    <text x="175" y="117" class="stat-val" style="fill: #50fa7b;">15 y.o.</text>
+  </g>
+
+  <!-- Rank Badge (A++) -->
+  <g transform="translate(360, 105)">
+    <circle cx="0" cy="0" r="42" class="circle-bg"/>
+    <circle cx="0" cy="0" r="42" class="circle-fill" transform="rotate(-90)"/>
+    <text x="0" y="-3" class="rank-text">A++</text>
+    <text x="0" y="17" class="rank-sub">SYSTEMS</text>
+  </g>
+</svg>'''
+
+def generate_languages_svg():
+    return '''<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
+    .lang-name { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
+    .lang-pct { font: 500 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #6272a4; }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+
+  <!-- Title -->
+  <text x="24" y="34" class="header">Most Used Languages</text>
+
+  <!-- Multi-color Progress Bar -->
+  <g transform="translate(24, 52)">
+    <rect x="0" y="0" width="392" height="10" rx="5" fill="#282a36"/>
+    <!-- Python: 46% = 180px -->
+    <rect x="0" y="0" width="180" height="10" rx="5" fill="#3572A5"/>
+    <!-- C / eBPF: 30% = 118px -->
+    <rect x="181" y="0" width="118" height="10" rx="0" fill="#555555"/>
+    <!-- Shell: 14% = 55px -->
+    <rect x="300" y="0" width="55" height="10" rx="0" fill="#89e051"/>
+    <!-- C++: 10% = 36px -->
+    <rect x="356" y="0" width="36" height="10" rx="5" fill="#f34b7d"/>
+  </g>
+
+  <!-- Languages Legend (2 columns) -->
+  <g transform="translate(24, 82)">
+    <!-- Col 1 -->
+    <circle cx="6" cy="6" r="5" fill="#3572A5"/>
+    <text x="18" y="10" class="lang-name">Python <tspan class="lang-pct">46.2%</tspan></text>
+
+    <circle cx="6" cy="34" r="5" fill="#555555"/>
+    <text x="18" y="38" class="lang-name">C (Kernel/eBPF) <tspan class="lang-pct">30.1%</tspan></text>
+
+    <circle cx="6" cy="62" r="5" fill="#89e051"/>
+    <text x="18" y="66" class="lang-name">Shell / Fish <tspan class="lang-pct">13.8%</tspan></text>
+
+    <!-- Col 2 -->
+    <circle cx="218" cy="6" r="5" fill="#f34b7d"/>
+    <text x="230" y="10" class="lang-name">C++ <tspan class="lang-pct">9.9%</tspan></text>
+
+    <circle cx="218" cy="34" r="5" fill="#f1e05a"/>
+    <text x="230" y="38" class="lang-name">HTML/CSS <tspan class="lang-pct">3.5%</tspan></text>
+
+    <circle cx="218" cy="62" r="5" fill="#00ADD8"/>
+    <text x="230" y="66" class="lang-name">Go (Tunnel) <tspan class="lang-pct">2.5%</tspan></text>
+  </g>
+</svg>'''
+
+if __name__ == "__main__":
+    with open("stats.svg", "w") as f:
+        f.write(generate_stats_svg())
+
+    with open("languages.svg", "w") as f:
+        f.write(generate_languages_svg())
+
+    print("Created stats.svg and languages.svg successfully!")

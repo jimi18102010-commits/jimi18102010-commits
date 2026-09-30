@@ -1,0 +1,49 @@
+<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
+    .lang-name { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
+    .lang-pct { font: 500 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #6272a4; }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+
+  <!-- Title -->
+  <text x="24" y="34" class="header">Most Used Languages</text>
+
+  <!-- Multi-color Progress Bar -->
+  <g transform="translate(24, 52)">
+    <rect x="0" y="0" width="392" height="10" rx="5" fill="#282a36"/>
+    <!-- Python: 46% = 180px -->
+    <rect x="0" y="0" width="180" height="10" rx="5" fill="#3572A5"/>
+    <!-- C / eBPF: 30% = 118px -->
+    <rect x="181" y="0" width="118" height="10" rx="0" fill="#555555"/>
+    <!-- Shell: 14% = 55px -->
+    <rect x="300" y="0" width="55" height="10" rx="0" fill="#89e051"/>
+    <!-- C++: 10% = 36px -->
+    <rect x="356" y="0" width="36" height="10" rx="5" fill="#f34b7d"/>
+  </g>
+
+  <!-- Languages Legend (2 columns) -->
+  <g transform="translate(24, 82)">
+    <!-- Col 1 -->
+    <circle cx="6" cy="6" r="5" fill="#3572A5"/>
+    <text x="18" y="10" class="lang-name">Python <tspan class="lang-pct">46.2%</tspan></text>
+
+    <circle cx="6" cy="34" r="5" fill="#555555"/>
+    <text x="18" y="38" class="lang-name">C (Kernel/eBPF) <tspan class="lang-pct">30.1%</tspan></text>
+
+    <circle cx="6" cy="62" r="5" fill="#89e051"/>
+    <text x="18" y="66" class="lang-name">Shell / Fish <tspan class="lang-pct">13.8%</tspan></text>
+
+    <!-- Col 2 -->
+    <circle cx="218" cy="6" r="5" fill="#f34b7d"/>
+    <text x="230" y="10" class="lang-name">C++ <tspan class="lang-pct">9.9%</tspan></text>
+
+    <circle cx="218" cy="34" r="5" fill="#f1e05a"/>
+    <text x="230" y="38" class="lang-name">HTML/CSS <tspan class="lang-pct">3.5%</tspan></text>
+
+    <circle cx="218" cy="62" r="5" fill="#00ADD8"/>
+    <text x="230" y="66" class="lang-name">Go (Tunnel) <tspan class="lang-pct">2.5%</tspan></text>
+  </g>
+</svg>

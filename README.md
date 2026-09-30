@@ -1,89 +1,66 @@
 <div align="center">
 
-<img src="https://xs338.xuss.us/mullvad-banner.jpg?v=2" width="100%" />
-
-<br/>
-
-<p align="center">
-  <a href="https://t.me/jimmiy_dev" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-1E242A?style=for-the-badge&logo=telegram&logoColor=white" />
-  </a>
-  <a href="https://x.com/jimmiy_dev" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1E242A?style=for-the-badge&logo=x&logoColor=white" />
-  </a>
-  <a href="mailto:jimi18102010@gmail.com">
-    <img src="https://img.shields.io/badge/Email-1E242A?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</p>
+<img src="assets/mullvad-banner.jpg" width="100%" />
 
 </div>
 
----
+## Hey there! I'm Jimmiy 👋
 
-### ⚡ Manifesto
-
-> *"Most modern software is slow, bloated, and disrespectful to hardware.  
-> I write the opposite: zero-bloat, mechanical sympathy, and direct control over the wire."*
+> **15 y.o. Systems & Low-Latency Developer based in Uzbekistan**  
+> *Passionate about Linux kernel internals, eBPF, network packet inspection, and zero-bloat engineering.*
 
 ---
-
-### 👤 About Me
-
-- **Age:** 15 years old (10th grade)
-- **Location:** Uzbekistan
-- **Environment:** CachyOS Linux (x86_64, custom kernel)
-- **Time dedicated:** 4–7 hours every single day
-- **Core Passion:** Systems programming, kernel-level packet filtering (eBPF / XDP), networking protocols, and low-latency infrastructure.
-
-I don't build generic web templates or toy tutorials. I study how Linux, the CPU cache, network interface cards, and byte-streams actually interact — and write fast, deterministic software that solves real problems.
-
----
-
-### 🏆 Open Source & Upstream Track Record
-
-- **[wkentaro/gdown](https://github.com/wkentaro/gdown) (⭐️ 5,500+)**  
-  *Official Contributor* — [PR #532 (Merged)](https://github.com/wkentaro/gdown/pull/532). Solved core multiline form parsing and raw download URL resolution.
-  
-- **[secdev/scapy](https://github.com/secdev/scapy) (⭐️ 11,500+)**  
-  *Core Networking Parser* — [PR #5207 (Open)](https://github.com/secdev/scapy/pull/5207). Fixed unhandled `IndexError` in IPv6 Segment Routing Header wire dissection.
-
-- **[VORTEX](https://github.com/jimi18102010-commits/vortex)**  
-  High-performance L4/L7 Reverse-Proxy with eBPF/XDP kernel drop (>10M PPS wire-speed O(1) IP blacklist) and raw TLS ClientHello JA3/JA4 fingerprint radar.
-
-- **[FaceBlast](https://github.com/jimi18102010-commits/faceblast)**  
-  Zero-C++, zero-bloat biometric face recognition suite (<18ms inference) powered by ONNX Runtime and YuNet/SFace.
-
-- **[DriveBlast](https://github.com/jimi18102010-commits/Driveblast)**  
-  High-speed chunked Google Drive downloader with byte-range resume capability and virus bypass.
-
----
-
-### 🧭 Engineering Philosophy
-
-1. **Mechanical Sympathy:** Understand the hardware, CPU pipelines, and OS kernel before writing a single line of code.
-2. **Zero Bloat:** Never pull a 2 GB framework when 50 lines of clean, verified algorithms solve the problem faster.
-3. **Upstream First:** Don't just complain about broken software — find the root cause, fix it at the source, and push it back to the world.
-4. **Obsessive Consistency:** Coding 5+ hours every day isn't a chore; it's a craft.
-
----
-
-### 🛠️ Systems & Technologies
 
 <p align="center">
-  <img src="https://img.shields.io/badge/C-1E242A?style=for-the-badge&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/eBPF%20%2F%20XDP-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux%20Kernel-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-1E242A?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-1E242A?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/ONNX%20Runtime-1E242A?style=for-the-badge&logo=onnx&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-1E242A?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-1E242A?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img height="185" src="stats.svg" />
+  <img height="185" src="languages.svg" />
 </p>
+
+---
+
+<div style="display: inline_block"><br>
+  <img align="right" alt="Jimmiy" height="120" src="assets/mole-avatar.png">
+  <img align="center" alt="Python" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+  <img align="center" alt="C" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
+  <img align="center" alt="C++" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">
+  <img align="center" alt="Linux" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg">
+  <img align="center" alt="Bash" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg">
+  <img align="center" alt="Git" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+  <img align="center" alt="FastAPI" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg">
+  <img align="center" alt="Docker" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
+</div>
+
+<br/>
+
+<div> 
+  <a href="https://t.me/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
+  <a href="https://x.com/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
+  <a href="mailto:jimi18102010@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+</div>
+
+<br/>
+
+---
+
+### 🏆 Upstream Open-Source Contributions
+
+- 🌟 **[wkentaro/gdown](https://github.com/wkentaro/gdown)** (5,500+ ⭐) — **Merged** ([PR #532](https://github.com/wkentaro/gdown/pull/532)) • Multiform RFC & raw URL resolution
+- ⚡ **[secdev/scapy](https://github.com/secdev/scapy)** (11,500+ ⭐) — **PR Open** ([PR #5207](https://github.com/secdev/scapy/pull/5207)) • Fixed IPv6 Segment Routing Header crash
+
+---
+
+### 🐍 Contribution Activity
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake.svg">
+    <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg" width="100%">
+  </picture>
+</div>
 
 <br/>
 
 <div align="center">
-
-![Visitor Count](https://count.getloli.com/@jimi18102010-commits?name=jimi18102010-commits&theme=3d-num&padding=16&offset=0&align=center&scale=1.3&pixelated=1&darkmode=auto)
-
+  <img src="https://komarev.com/ghpvc/?username=jimi18102010-commits&color=ff79c6&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
 </div>
