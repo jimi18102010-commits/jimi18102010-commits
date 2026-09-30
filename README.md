@@ -19,7 +19,7 @@
 ---
 
 <div style="display: inline_block"><br>
-  <img align="right" alt="Jimmiy" height="120" src="assets/mole-avatar.png">
+  <img align="right" alt="Jimmiy" height="135" src="assets/mole-avatar.svg">
   <img align="center" alt="Python" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
   <img align="center" alt="C" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
   <img align="center" alt="C++" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">
@@ -52,11 +52,7 @@
 ### 🐍 Contribution Activity
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake.svg">
-    <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg" width="100%">
-  </picture>
+  <img alt="Snake contribution animation" src="assets/github-contribution-grid-snake-dark.svg" width="100%">
 </div>
 
 <br/>
