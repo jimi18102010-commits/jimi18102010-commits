@@ -16,12 +16,30 @@
   </a>
 </p>
 
+<img src="terminal.svg" width="100%" />
+
 </div>
 
 ---
 
-- 15 y.o. software & systems developer based in Uzbekistan
-- focus on low-latency systems, CLI utilities, and zero-bloat software
+### ⚡ Systems Architecture & Engineering
+
+```text
+┌──────────────────┬──────────────────────────────────┬─────────────────────────────┬─────────────┐
+│ Project / Work   │ Low-Level Tech Stack             │ Benchmark & Capabilities    │ Status      │
+├──────────────────┼──────────────────────────────────┼─────────────────────────────┼─────────────┤
+│ ⚡ VORTEX        │ eBPF / XDP, C, Python 3.12       │ 12.4M PPS wire drops O(1)   │ Active 🚀   │
+│ 🎯 secdev/scapy  │ Core IPv6 & SRH Header Engine    │ Fixed IndexError (#5206)    │ PR #5207 ⚡ │
+│ 📦 wkentaro/gdown │ Multi-stream Chunk Parser        │ Upstream RFC URL resolution │ Merged ✅   │
+│ 👁️ FaceBlast     │ PyTorch, ArcFace, ONNX, Qt6      │ <18ms real-time inference   │ Production  │
+│ 🚀 DriveBlast    │ Async Chunk Streaming Pool       │ 98 MB/s wire saturation     │ Production  │
+└──────────────────┴──────────────────────────────────┴─────────────────────────────┴─────────────┘
+```
+
+---
+
+- 15 y.o. systems & low-latency software developer based in Uzbekistan
+- focus on low-latency systems, kernel filters (eBPF/XDP), networking protocols, and zero-bloat CLI tooling
 - upstream contributor to [wkentaro/gdown](https://github.com/wkentaro/gdown) (PR #532) & [secdev/scapy](https://github.com/secdev/scapy) (PR #5207)
 - building [VORTEX](https://github.com/jimi18102010-commits/vortex) (eBPF/XDP Anti-DDoS Shield & TLS Radar), [FaceBlast](https://github.com/jimi18102010-commits/faceblast) & [DriveBlast](https://github.com/jimi18102010-commits/Driveblast)
 - site: [xs338.xuss.us](https://xs338.xuss.us)
@@ -31,12 +49,12 @@
 <br/>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-1E242A?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/C-1E242A?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/eBPF%20%2F%20XDP-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux%20Kernel-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-1E242A?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/C++-1E242A?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/eBPF-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-1E242A?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/ONNX-1E242A?style=for-the-badge&logo=onnx&logoColor=white" />
+  <img src="https://img.shields.io/badge/ONNX%20Runtime-1E242A?style=for-the-badge&logo=onnx&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-1E242A?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-1E242A?style=for-the-badge&logo=fastapi&logoColor=white" />
 </p>
