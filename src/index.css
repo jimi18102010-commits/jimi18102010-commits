@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-graphite: #12151c;
+  --color-surface: #181d27;
+  --color-border-dark: #262f3f;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-accent-cyan: #38bdf8;
+  --color-accent-green: #10b981;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-graphite text-text-primary font-sans antialiased overflow-x-hidden selection:bg-accent-cyan/20 selection:text-accent-cyan;
+  }
+
+  ::selection {
+    background-color: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+  }
+}
+
+@layer utilities {
+  .dashed-grid {
+    background-image: repeating-linear-gradient(to right, var(--color-border-dark) 0px, var(--color-border-dark) 1px, transparent 1px, transparent 24px),
+                      repeating-linear-gradient(to bottom, var(--color-border-dark) 0px, var(--color-border-dark) 1px, transparent 1px, transparent 24px);
+    background-size: 24px 24px;
+    background-position: top left;
+  }
+
+  .dashed-border-y {
+    background-image: repeating-linear-gradient(to right, var(--color-border-dark) 0px, var(--color-border-dark) 4px, transparent 4px, transparent 8px);
+    background-position: top;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+
+  .dashed-border-b {
+    background-image: repeating-linear-gradient(to right, var(--color-border-dark) 0px, var(--color-border-dark) 4px, transparent 4px, transparent 8px);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+  }
+
+  .dashed-border-x {
+    background-image: repeating-linear-gradient(to bottom, var(--color-border-dark) 0px, var(--color-border-dark) 4px, transparent 4px, transparent 8px);
+    background-position: right;
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+  }
+}
