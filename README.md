@@ -1,19 +1,19 @@
 <div align="center">
 
-<img src="assets/mullvad-banner.jpg" width="100%" />
+<img src="assets/mullvad-banner.jpg" width="100%" alt="Dark abstract network-themed profile banner" />
 
 </div>
 
 ## Hey there! I'm Jimmiy 👋
 
-> **15 y.o. Systems & Low-Latency Developer based in Uzbekistan**  
+> **15 y.o. Systems & Low-Latency Developer based in Uzbekistan**  \
 > *Passionate about Linux kernel internals, eBPF, network packet inspection, and zero-bloat engineering.*
 
 ---
 
 <p align="center">
-  <img height="185" src="stats.svg" />
-  <img height="185" src="languages.svg" />
+  <img height="185" src="stats.svg" alt="GitHub statistics: stars, commits, pull requests, upstream repositories, and developer age" />
+  <img height="185" src="languages.svg" alt="Most used languages: Python, C, Shell, C++, HTML/CSS, and Go" />
 </p>
 
 ---
@@ -33,10 +33,10 @@
 <br/>
 
 <div> 
-  <a href="https://xs338.xuss.us" target="_blank"><img src="https://img.shields.io/badge/Website-08080A?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
-  <a href="https://t.me/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
-  <a href="https://x.com/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
-  <a href="mailto:jimi18102010@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+  <a href="https://xs338.xuss.us" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Website-08080A?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
+  <a href="https://t.me/jimmiy_dev" target="_blank"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
+  <a href="https://x.com/jimmiy_dev" target="_blank"><img alt="X / Twitter" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
+  <a href="mailto:jimi18102010@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </div>
 
 <br/>
