@@ -33,7 +33,6 @@
 <br/>
 
 <div> 
-  <a href="https://xs338.xuss.us" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Website-08080A?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
   <a href="https://t.me/jimmiy_dev" target="_blank"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
   <a href="https://x.com/jimmiy_dev" target="_blank"><img alt="X / Twitter" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
   <a href="mailto:jimi18102010@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
