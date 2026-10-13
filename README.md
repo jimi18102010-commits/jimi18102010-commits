@@ -20,6 +20,7 @@
 
 <div style="display: inline_block"><br>
   <img align="right" alt="Jimmiy" height="135" src="assets/mole-avatar.svg">
+  <img align="center" alt="Rust" height="34" src="https://img.shields.io/badge/Rust-dea584?style=for-the-badge&amp;logo=rust&amp;logoColor=000">
   <img align="center" alt="Python" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
   <img align="center" alt="C" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
   <img align="center" alt="C++" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">
@@ -42,8 +43,20 @@
 
 ---
 
+### 🦀 Currently Building in Rust
+
+**[PhotoCraft — Social Batch Export](https://github.com/jimi18102010-commits/photocraft)**  
+A feature fork of the Rust-native PhotoCraft editor: four social-media presets, crop/fit, PNG/JPEG export, a native dialog and a CLI. Originals stay untouched; existing outputs are never overwritten.
+
+[![PhotoCraft Social Batch Export](assets/photocraft-card.svg)](https://github.com/jimi18102010-commits/photocraft)
+
+*The base editor is upstream work by the ArtCraft team and contributors. My fork adds the batch-export feature, integration, tests and documentation.*
+
+---
+
 ### ⚡ Featured Projects
 
+- 🦀 **[PhotoCraft — Jimmiy Edition](https://github.com/jimi18102010-commits/photocraft)** — Safe social-media batch export for a native photoeditor *(Rust / egui)*
 - 🛡️ **[VORTEX](https://github.com/jimi18102010-commits/vortex)** — High-Performance Edge L4/L7 Reverse-Proxy, Anti-DDoS Shield & TLS Radar *(eBPF / XDP)*
 - 👤 **[FaceBlast](https://github.com/jimi18102010-commits/faceblast)** — Ultra-fast, lightweight face detection & recognition *(ONNX Runtime)*
 - 🚀 **[DriveBlast](https://github.com/jimi18102010-commits/Driveblast)** — High-speed Google Drive CLI downloader & document exporter
