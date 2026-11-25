@@ -1,3 +1,4 @@
+import datetime as dt
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -8,6 +9,21 @@ import generate_cards as gc
 
 
 class ProfileStatsTests(unittest.TestCase):
+    def test_compute_age_boundaries(self):
+        bday = dt.date(2010, 10, 18)
+        self.assertEqual(gc.compute_age(bday, dt.date(2026, 10, 17)), 15)
+        self.assertEqual(gc.compute_age(bday, dt.date(2026, 10, 18)), 16)
+        self.assertEqual(gc.compute_age(bday, dt.date(2026, 11, 25)), 16)
+        self.assertEqual(gc.compute_age(bday, dt.date(2027, 10, 18)), 17)
+
+    def test_render_hero_dark_and_light_svgs_valid_xml(self):
+        for theme in ("dark", "light"):
+            svg = gc.render_hero_svg(16, theme=theme)
+            root = ET.fromstring(svg)
+            self.assertTrue(root.tag.endswith("svg"))
+            self.assertIn("16 y.o.", svg)
+            self.assertNotIn("15 y.o.", svg)
+
     def test_collect_stats_pagination_and_filtering(self):
         calls = []
 
