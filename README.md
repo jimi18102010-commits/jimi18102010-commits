@@ -44,16 +44,6 @@
 
 **[PhotoCraft — Social Batch Export](https://github.com/jimi18102010-commits/photocraft)** — A feature fork of the Rust-native PhotoCraft editor adding four social-media presets, crop/fit resizing, PNG/JPEG export, a native `egui` dialog, and a CLI. Originals stay untouched and existing outputs are never overwritten.
 
-<div align="center">
-  <a href="https://github.com/jimi18102010-commits/photocraft">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/photocraft-card.svg" />
-      <source media="(prefers-color-scheme: light)" srcset="assets/photocraft-card-light.svg" />
-      <img src="assets/photocraft-card.svg" width="100%" alt="PhotoCraft — Jimmiy Edition: Social Batch Export" />
-    </picture>
-  </a>
-</div>
-
 *Base editor is upstream work by the ArtCraft team and contributors. This fork contributes the social batch-export feature, engine integration, tests, and docs.*
 
 ---
