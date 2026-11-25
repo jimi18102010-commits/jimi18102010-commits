@@ -60,7 +60,7 @@ def github_json(path: str) -> object:
     """Fetch a JSON payload from the GitHub REST API."""
     headers = {
         "Accept": "application/vnd.github+json",
-        "User-Agent": "jimmiy-profile-stats",
+        "User-Agent": "jimmy-profile-stats",
     }
     token = os.environ.get("GITHUB_TOKEN")
     if token:
@@ -212,8 +212,8 @@ def render_hero_svg(age: int, theme: str = "dark") -> str:
     age_text = html.escape(f"{age} y.o.")
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220" role="img" aria-labelledby="hero-{theme}-title hero-{theme}-desc">
-  <title id="hero-{theme}-title">Jimmiy — Systems &amp; Low-Latency Developer</title>
-  <desc id="hero-{theme}-desc">GitHub profile header for Jimmiy, based in Uzbekistan, focused on Rust, C, eBPF/XDP, and Linux systems tooling.</desc>
+  <title id="hero-{theme}-title">Jimmy — Systems &amp; Low-Latency Developer</title>
+  <desc id="hero-{theme}-desc">GitHub profile header for Jimmy, based in Uzbekistan, focused on Rust, C, eBPF/XDP, and Linux systems tooling.</desc>
   <defs>
     <pattern id="dot-grid-{theme}" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="{c['grid']}" />
@@ -239,7 +239,7 @@ def render_hero_svg(age: int, theme: str = "dark") -> str:
     <rect x="28" y="34" width="4" height="20" rx="2" fill="{c['blue']}" />
     <text x="42" y="49" fill="{c['secondary']}" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" letter-spacing="2">UZBEKISTAN  //  SYSTEMS &amp; LOW-LATENCY</text>
 
-    <text x="28" y="100" fill="{c['primary']}" font-size="42" font-weight="700" letter-spacing="-0.5">Jimmiy</text>
+    <text x="28" y="100" fill="{c['primary']}" font-size="42" font-weight="700" letter-spacing="-0.5">Jimmy</text>
     <text x="28" y="131" fill="{c['secondary']}" font-size="14.5" font-weight="400">Linux kernel internals, eBPF/XDP, Rust tooling &amp; zero-bloat engineering.</text>
 
     <!-- Focus pills -->

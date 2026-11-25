@@ -21,6 +21,8 @@ class ProfileStatsTests(unittest.TestCase):
             svg = gc.render_hero_svg(16, theme=theme)
             root = ET.fromstring(svg)
             self.assertTrue(root.tag.endswith("svg"))
+            self.assertIn(">Jimmy<", svg)
+            self.assertNotIn("Jimmiy", svg)
             self.assertIn("16 y.o.", svg)
             self.assertNotIn("15 y.o.", svg)
 
@@ -31,12 +33,12 @@ class ProfileStatsTests(unittest.TestCase):
             calls.append(path)
             if path.startswith("users/") and "&page=1" in path:
                 return [
-                    {"owner": {"login": "jimmiy"}, "stargazers_count": 2, "fork": False, "private": False}
+                    {"owner": {"login": "jimmy"}, "stargazers_count": 2, "fork": False, "private": False}
                 ] * 100
             if path.startswith("users/") and "&page=2" in path:
                 return [
-                    {"owner": {"login": "jimmiy"}, "stargazers_count": 3, "fork": True, "private": False},
-                    {"owner": {"login": "jimmiy"}, "stargazers_count": 99, "fork": False, "private": True},
+                    {"owner": {"login": "jimmy"}, "stargazers_count": 3, "fork": True, "private": False},
+                    {"owner": {"login": "jimmy"}, "stargazers_count": 99, "fork": False, "private": True},
                     {"owner": {"login": "someone-else"}, "stargazers_count": 50, "fork": False, "private": False},
                 ]
             if "is%3Amerged" in path:
@@ -45,7 +47,7 @@ class ProfileStatsTests(unittest.TestCase):
                 return {"total_count": 1, "incomplete_results": False}
             raise AssertionError(f"Unexpected path: {path}")
 
-        data = gc.collect_stats("jimmiy", api=fake_api)
+        data = gc.collect_stats("jimmy", api=fake_api)
         self.assertEqual(data["public_repos"], 101)
         self.assertEqual(data["original_repos"], 100)
         self.assertEqual(data["fork_repos"], 1)
@@ -62,7 +64,7 @@ class ProfileStatsTests(unittest.TestCase):
             return {"total_count": 0, "incomplete_results": True}
 
         with self.assertRaises(RuntimeError):
-            gc.collect_stats("jimmiy", api=fake_api)
+            gc.collect_stats("jimmy", api=fake_api)
 
     def test_invalid_username_rejected(self):
         with self.assertRaises(ValueError):
@@ -70,7 +72,7 @@ class ProfileStatsTests(unittest.TestCase):
 
     def test_render_dark_and_light_svgs_valid_xml(self):
         sample = {
-            "username": "jimmiy",
+            "username": "jimmy",
             "public_repos": 9,
             "original_repos": 5,
             "fork_repos": 4,

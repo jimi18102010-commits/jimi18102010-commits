@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
-  <img src="assets/hero-dark.svg" width="100%" alt="Jimmiy — Systems & Low-Latency Developer based in Uzbekistan" />
+  <img src="assets/hero-dark.svg" width="100%" alt="Jimmy — Systems & Low-Latency Developer based in Uzbekistan" />
 </picture>
 
 <br/><br/>
@@ -52,7 +52,7 @@
 
 | Project | Stack | Focus |
 | :--- | :--- | :--- |
-| **[PhotoCraft — Jimmiy Edition](https://github.com/jimi18102010-commits/photocraft)** | `Rust · egui · CLI` | Non-destructive social-media batch export (4 presets, crop/fit, no-clobber writes) |
+| **[PhotoCraft — Jimmy Edition](https://github.com/jimi18102010-commits/photocraft)** | `Rust · egui · CLI` | Non-destructive social-media batch export (4 presets, crop/fit, no-clobber writes) |
 | **[VORTEX](https://github.com/jimi18102010-commits/vortex)** | `C (eBPF/XDP) · Python` | Edge L4/L7 TCP reverse proxy, IPv4 XDP drop filter, JA3/JA4 TLS sniffer & live TUI |
 | **[FaceBlast](https://github.com/jimi18102010-commits/faceblast)** | `Python · OpenCV ONNX` | Lightweight face detection & 128-D recognition using YuNet + SFace (no `dlib`/PyTorch) |
 | **[DriveBlast](https://github.com/jimi18102010-commits/Driveblast)** | `Python · Rich CLI` | Resumable Google Drive downloader with virus-warning bypass & Docs/Sheets export |
