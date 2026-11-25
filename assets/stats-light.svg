@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="116" viewBox="0 0 900 116" role="img" aria-labelledby="stats-title-light">
+  <title id="stats-title-light">GitHub Stats Snapshot (light)</title>
+  <g>
+    <rect x="1" y="6" width="214" height="104" rx="10" fill="#f6f8fa" stroke="#d0d7de" />
+    <circle cx="23" cy="28" r="3.5" fill="#1a7f37" />
+    <text x="33" y="32" fill="#57606a" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="1.1">UPSTREAM MERGED</text>
+    <text x="19" y="70" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700">3</text>
+    <text x="19" y="94" fill="#6e7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">gdown · scapy</text>
+  </g>
+  <g>
+    <rect x="229" y="6" width="214" height="104" rx="10" fill="#f6f8fa" stroke="#d0d7de" />
+    <circle cx="251" cy="28" r="3.5" fill="#bc4c00" />
+    <text x="261" y="32" fill="#57606a" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="1.1">UPSTREAM OPEN</text>
+    <text x="247" y="70" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700">1</text>
+    <text x="247" y="94" fill="#6e7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">j178/prek (Rust)</text>
+  </g>
+  <g>
+    <rect x="457" y="6" width="214" height="104" rx="10" fill="#f6f8fa" stroke="#d0d7de" />
+    <circle cx="479" cy="28" r="3.5" fill="#0969da" />
+    <text x="489" y="32" fill="#57606a" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="1.1">PUBLIC REPOS</text>
+    <text x="475" y="70" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700">9</text>
+    <text x="475" y="94" fill="#6e7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">5 original · 4 forks</text>
+  </g>
+  <g>
+    <rect x="685" y="6" width="214" height="104" rx="10" fill="#f6f8fa" stroke="#d0d7de" />
+    <circle cx="707" cy="28" r="3.5" fill="#1f2328" />
+    <text x="717" y="32" fill="#57606a" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="10.5" font-weight="600" letter-spacing="1.1">TOTAL STARS</text>
+    <text x="703" y="70" fill="#1f2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700">11</text>
+    <text x="703" y="94" fill="#6e7681" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="11">synced 2026-11-25</text>
+  </g>
+</svg>

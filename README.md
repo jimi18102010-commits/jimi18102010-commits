@@ -1,83 +1,92 @@
 <div align="center">
 
-<img src="assets/mullvad-banner.jpg" width="100%" alt="Dark abstract network-themed profile banner" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg" />
+  <img src="assets/hero-dark.svg" width="100%" alt="Jimmiy — Systems & Low-Latency Developer based in Uzbekistan" />
+</picture>
+
+<br/><br/>
+
+<a href="https://t.me/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/Telegram-161b22?style=flat-square&logo=telegram&logoColor=2CA5E0" alt="Telegram" /></a>
+<a href="https://x.com/jimmiy_dev" target="_blank"><img src="https://img.shields.io/badge/X-161b22?style=flat-square&logo=x&logoColor=f0f6fc" alt="X" /></a>
+<a href="mailto:jimi18102010@gmail.com"><img src="https://img.shields.io/badge/Email-161b22?style=flat-square&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/stats-light.svg" />
+  <img src="assets/stats-dark.svg" width="100%" alt="Live GitHub metrics synced via GitHub REST API" />
+</picture>
 
 </div>
 
-## Hey there! I'm Jimmiy 👋
-
-> **15 y.o. Systems & Low-Latency Developer based in Uzbekistan**  \
-> *Passionate about Linux kernel internals, eBPF, network packet inspection, and zero-bloat engineering.*
-
 ---
 
-<p align="center">
-  <img height="185" src="stats.svg" alt="GitHub statistics: stars, commits, pull requests, upstream repositories, and developer age" />
-  <img height="185" src="languages.svg" alt="Most used languages: Python, C, Shell, C++, HTML/CSS, and Go" />
-</p>
-
----
-
-<div style="display: inline_block"><br>
-  <img align="right" alt="Jimmiy" height="135" src="assets/mole-avatar.svg">
-  <img align="center" alt="Rust" height="34" src="https://img.shields.io/badge/Rust-dea584?style=for-the-badge&amp;logo=rust&amp;logoColor=000">
-  <img align="center" alt="Python" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="center" alt="C" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
-  <img align="center" alt="C++" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">
-  <img align="center" alt="Linux" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg">
-  <img align="center" alt="Bash" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg">
-  <img align="center" alt="Git" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
-  <img align="center" alt="FastAPI" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg">
-  <img align="center" alt="Docker" height="34" width="42" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
-</div>
-
-<br/>
-
-<div> 
-  <a href="https://t.me/jimmiy_dev" target="_blank"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
-  <a href="https://x.com/jimmiy_dev" target="_blank"><img alt="X / Twitter" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
-  <a href="mailto:jimi18102010@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-</div>
-
-<br/>
-
----
-
-### 🦀 Currently Building in Rust
-
-**[PhotoCraft — Social Batch Export](https://github.com/jimi18102010-commits/photocraft)**  
-A feature fork of the Rust-native PhotoCraft editor: four social-media presets, crop/fit, PNG/JPEG export, a native dialog and a CLI. Originals stay untouched; existing outputs are never overwritten.
-
-[![PhotoCraft Social Batch Export](assets/photocraft-card.svg)](https://github.com/jimi18102010-commits/photocraft)
-
-*The base editor is upstream work by the ArtCraft team and contributors. My fork adds the batch-export feature, integration, tests and documentation.*
-
----
-
-### ⚡ Featured Projects
-
-- 🦀 **[PhotoCraft — Jimmiy Edition](https://github.com/jimi18102010-commits/photocraft)** — Safe social-media batch export for a native photoeditor *(Rust / egui)*
-- 🛡️ **[VORTEX](https://github.com/jimi18102010-commits/vortex)** — High-Performance Edge L4/L7 Reverse-Proxy, Anti-DDoS Shield & TLS Radar *(eBPF / XDP)*
-- 👤 **[FaceBlast](https://github.com/jimi18102010-commits/faceblast)** — Ultra-fast, lightweight face detection & recognition *(ONNX Runtime)*
-- 🚀 **[DriveBlast](https://github.com/jimi18102010-commits/Driveblast)** — High-speed Google Drive CLI downloader & document exporter
-
----
-
-### 🏆 Upstream Open-Source Contributions
-
-- 🌟 **[wkentaro/gdown](https://github.com/wkentaro/gdown)** (5,500+ ⭐) — **Merged** ([PR #532](https://github.com/wkentaro/gdown/pull/532)) • Multiform RFC & raw URL resolution
-- ⚡ **[secdev/scapy](https://github.com/secdev/scapy)** (11,500+ ⭐) — **PR Open** ([PR #5214](https://github.com/secdev/scapy/pull/5214)) • Fixed IPv6 Segment Routing Header crash
-
----
-
-### 🐍 Contribution Activity
+### Core Stack
 
 <div align="center">
-  <img alt="Snake contribution animation" src="assets/github-contribution-grid-snake-dark.svg" width="100%">
+  <img src="https://img.shields.io/badge/Rust-161b22?style=flat-square&logo=rust&logoColor=e08256" alt="Rust" />
+  <img src="https://img.shields.io/badge/C-161b22?style=flat-square&logo=c&logoColor=58a6ff" alt="C" />
+  <img src="https://img.shields.io/badge/C%2B%2B-161b22?style=flat-square&logo=cplusplus&logoColor=58a6ff" alt="C++" />
+  <img src="https://img.shields.io/badge/Python-161b22?style=flat-square&logo=python&logoColor=3776AB" alt="Python" />
+  <img src="https://img.shields.io/badge/Linux-161b22?style=flat-square&logo=linux&logoColor=f0f6fc" alt="Linux" />
+  <img src="https://img.shields.io/badge/Bash-161b22?style=flat-square&logo=gnubash&logoColor=3fb950" alt="Bash" />
+  <img src="https://img.shields.io/badge/Docker-161b22?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
+  <img src="https://img.shields.io/badge/FastAPI-161b22?style=flat-square&logo=fastapi&logoColor=009688" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Git-161b22?style=flat-square&logo=git&logoColor=F05032" alt="Git" />
 </div>
 
-<br/>
+---
+
+### Currently Building in Rust
+
+**[PhotoCraft — Social Batch Export](https://github.com/jimi18102010-commits/photocraft)** — A feature fork of the Rust-native PhotoCraft editor adding four social-media presets, crop/fit resizing, PNG/JPEG export, a native `egui` dialog, and a CLI. Originals stay untouched and existing outputs are never overwritten.
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=jimi18102010-commits&color=ff79c6&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+  <a href="https://github.com/jimi18102010-commits/photocraft">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/photocraft-card.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="assets/photocraft-card-light.svg" />
+      <img src="assets/photocraft-card.svg" width="100%" alt="PhotoCraft — Jimmiy Edition: Social Batch Export" />
+    </picture>
+  </a>
+</div>
+
+*Base editor is upstream work by the ArtCraft team and contributors. This fork contributes the social batch-export feature, engine integration, tests, and docs.*
+
+---
+
+### Featured Projects
+
+| Project | Stack | Focus |
+| :--- | :--- | :--- |
+| **[PhotoCraft — Jimmiy Edition](https://github.com/jimi18102010-commits/photocraft)** | `Rust · egui · CLI` | Non-destructive social-media batch export (4 presets, crop/fit, no-clobber writes) |
+| **[VORTEX](https://github.com/jimi18102010-commits/vortex)** | `C (eBPF/XDP) · Python` | Edge L4/L7 TCP reverse proxy, IPv4 XDP drop filter, JA3/JA4 TLS sniffer & live TUI |
+| **[FaceBlast](https://github.com/jimi18102010-commits/faceblast)** | `Python · OpenCV ONNX` | Lightweight face detection & 128-D recognition using YuNet + SFace (no `dlib`/PyTorch) |
+| **[DriveBlast](https://github.com/jimi18102010-commits/Driveblast)** | `Python · Rich CLI` | Resumable Google Drive downloader with virus-warning bypass & Docs/Sheets export |
+
+---
+
+### Upstream Open-Source Contributions
+
+| Repository | Status | Contribution |
+| :--- | :---: | :--- |
+| **[`secdev/scapy`](https://github.com/secdev/scapy)** *(11.5k+ ★)* | ![Merged](https://img.shields.io/badge/Merged-8957e5?style=flat-square) | [PR #5214](https://github.com/secdev/scapy/pull/5214) — Fixed `IndexError` when dissecting IPv6 packets with truncated `nh=43` routing header payloads |
+| **[`wkentaro/gdown`](https://github.com/wkentaro/gdown)** *(5.5k+ ★)* | ![Merged](https://img.shields.io/badge/Merged-8957e5?style=flat-square) | [PR #532](https://github.com/wkentaro/gdown/pull/532) — Added bare & `/preview` Google Drive URL resolution with unit tests |
+| **[`j178/prek`](https://github.com/j178/prek)** *(Rust)* | ![Draft](https://img.shields.io/badge/Draft%20PR-6e7681?style=flat-square) | [PR #2873](https://github.com/j178/prek/pull/2873) — Run `pre-push` hooks against pushed ref contents via temporary detached worktree |
+
+---
+
+### Contribution Activity
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake.svg" />
+    <img src="https://raw.githubusercontent.com/jimi18102010-commits/jimi18102010-commits/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub contribution grid snake animation" />
+  </picture>
+  <br/><br/>
+  <img src="https://komarev.com/ghpvc/?username=jimi18102010-commits&color=58a6ff&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
 </div>

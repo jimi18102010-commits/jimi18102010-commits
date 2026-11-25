@@ -1,119 +1,210 @@
-# Generate pixel-perfect GitHub Stats and Most Used Languages cards
-# matching the exact aesthetic of Rafaella Ballerini's profile (Dracula / Dark Cyberpunk theme)
+"""Refresh profile statistics JSON and dark/light bento SVG cards from the GitHub REST API."""
+from __future__ import annotations
 
-def generate_stats_svg():
-    return '''<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
-    .stat-label { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
-    .stat-val { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f1fa8c; }
-    .icon { fill: #8be9fd; }
-    .rank-text { font: 800 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; text-anchor: middle; dominant-baseline: central; }
-    .rank-sub { font: 600 10px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #50fa7b; text-anchor: middle; }
-    .circle-bg { stroke: #282a36; stroke-width: 5; fill: none; }
-    .circle-fill { stroke: #ff79c6; stroke-width: 5; fill: none; stroke-linecap: round; stroke-dasharray: 220; stroke-dashoffset: 20; animation: rank 1.5s ease-out forwards; }
-    @keyframes rank { from { stroke-dashoffset: 220; } to { stroke-dashoffset: 20; } }
-  </style>
+import argparse
+import datetime as dt
+import html
+import json
+import os
+import re
+import urllib.parse
+import urllib.request
+from pathlib import Path
 
-  <!-- Card Background -->
-  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+THEMES = {
+    "dark": {
+        "card_bg": "#161b22",
+        "border": "#30363d",
+        "primary": "#f0f6fc",
+        "secondary": "#8b949e",
+        "muted": "#6e7681",
+        "blue": "#58a6ff",
+        "emerald": "#3fb950",
+        "amber": "#e08256",
+    },
+    "light": {
+        "card_bg": "#f6f8fa",
+        "border": "#d0d7de",
+        "primary": "#1f2328",
+        "secondary": "#57606a",
+        "muted": "#6e7681",
+        "blue": "#0969da",
+        "emerald": "#1a7f37",
+        "amber": "#bc4c00",
+    },
+}
 
-  <!-- Title -->
-  <text x="24" y="34" class="header">Jimmiy's GitHub Stats</text>
+FONT_SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+FONT_MONO = "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace"
 
-  <!-- Stats Rows -->
-  <g transform="translate(24, 58)">
-    <!-- Stars -->
-    <svg class="icon" x="0" y="0" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-    <text x="24" y="13" class="stat-label">Total Stars Earned:</text>
-    <text x="175" y="13" class="stat-val">12</text>
 
-    <!-- Commits -->
-    <svg class="icon" x="0" y="26" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM0 8a8 8 0 1116 0A8 8 0 010 8zm8-6a6 6 0 100 12A6 6 0 008 2z"/></svg>
-    <text x="24" y="39" class="stat-label">Total Commits:</text>
-    <text x="175" y="39" class="stat-val">142</text>
+def github_json(path: str) -> object:
+    """Fetch a JSON payload from the GitHub REST API."""
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "jimmiy-profile-stats",
+    }
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    request = urllib.request.Request("https://api.github.com/" + path, headers=headers)
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
 
-    <!-- PRs -->
-    <svg class="icon" x="0" y="52" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.256a2.251 2.251 0 101.5 0V5a2.5 2.5 0 00-2.5-2.5z"/></svg>
-    <text x="24" y="65" class="stat-label">Total PRs Merged/Open:</text>
-    <text x="175" y="65" class="stat-val">4</text>
 
-    <!-- Upstream Contributed To -->
-    <svg class="icon" x="0" y="78" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8V1.5z"/></svg>
-    <text x="24" y="91" class="stat-label">Upstream Repos:</text>
-    <text x="175" y="91" class="stat-val">2 (17k ⭐)</text>
+def collect_stats(username: str, api=github_json) -> dict:
+    """Collect verified repository and upstream PR metrics for a GitHub user."""
+    if not re.fullmatch(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})", username):
+        raise ValueError("Invalid GitHub username")
 
-    <!-- Age badge -->
-    <svg class="icon" x="0" y="104" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
-    <text x="24" y="117" class="stat-label">Developer Age:</text>
-    <text x="175" y="117" class="stat-val" style="fill: #50fa7b;">15 y.o.</text>
-  </g>
+    repos = []
+    page = 1
+    while True:
+        batch = api(f"users/{username}/repos?per_page=100&type=owner&page={page}")
+        repos.extend(
+            r
+            for r in batch
+            if not r.get("private", False)
+            and r.get("owner", {}).get("login", "").lower() == username.lower()
+        )
+        if len(batch) < 100:
+            break
+        page += 1
 
-  <!-- Rank Badge (A++) -->
-  <g transform="translate(360, 105)">
-    <circle cx="0" cy="0" r="42" class="circle-bg"/>
-    <circle cx="0" cy="0" r="42" class="circle-fill" transform="rotate(-90)"/>
-    <text x="0" y="-3" class="rank-text">A++</text>
-    <text x="0" y="17" class="rank-sub">SYSTEMS</text>
-  </g>
-</svg>'''
+    original = [r for r in repos if not r.get("fork", False)]
+    forks = [r for r in repos if r.get("fork", False)]
 
-def generate_languages_svg():
-    return '''<svg width="440" height="195" viewBox="0 0 440 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .header { font: 600 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #ff79c6; }
-    .lang-name { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #f8f8f2; }
-    .lang-pct { font: 500 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif; fill: #6272a4; }
-  </style>
+    result = {
+        "username": username,
+        "public_repos": len(repos),
+        "original_repos": len(original),
+        "fork_repos": len(forks),
+        "total_stars": sum(int(r.get("stargazers_count", 0)) for r in repos),
+        "original_stars": sum(int(r.get("stargazers_count", 0)) for r in original),
+    }
 
-  <!-- Card Background -->
-  <rect x="0.5" y="0.5" width="439" height="194" rx="8" fill="#0d1117" stroke="#30363d"/>
+    pr_queries = [
+        ("upstream_merged_prs", f"type:pr author:{username} is:merged -user:{username}"),
+        ("upstream_open_prs", f"type:pr author:{username} is:open -user:{username}"),
+    ]
+    for key, q in pr_queries:
+        query = urllib.parse.urlencode({"q": q, "per_page": 1})
+        found = api("search/issues?" + query)
+        if found.get("incomplete_results"):
+            raise RuntimeError(f"GitHub search returned incomplete results for {key}")
+        result[key] = int(found["total_count"])
 
-  <!-- Title -->
-  <text x="24" y="34" class="header">Most Used Languages</text>
+    result["updated_utc"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    result["source"] = "GitHub REST API; public owned repositories; upstream PRs across GitHub"
+    return result
 
-  <!-- Multi-color Progress Bar -->
-  <g transform="translate(24, 52)">
-    <rect x="0" y="0" width="392" height="10" rx="5" fill="#282a36"/>
-    <!-- Python: 46% = 180px -->
-    <rect x="0" y="0" width="180" height="10" rx="5" fill="#3572A5"/>
-    <!-- C / eBPF: 30% = 118px -->
-    <rect x="181" y="0" width="118" height="10" rx="0" fill="#555555"/>
-    <!-- Shell: 14% = 55px -->
-    <rect x="300" y="0" width="55" height="10" rx="0" fill="#89e051"/>
-    <!-- C++: 10% = 36px -->
-    <rect x="356" y="0" width="36" height="10" rx="5" fill="#f34b7d"/>
-  </g>
 
-  <!-- Languages Legend (2 columns) -->
-  <g transform="translate(24, 82)">
-    <!-- Col 1 -->
-    <circle cx="6" cy="6" r="5" fill="#3572A5"/>
-    <text x="18" y="10" class="lang-name">Python <tspan class="lang-pct">46.2%</tspan></text>
+def render_stats_svg(stats: dict, theme: str = "dark") -> str:
+    """Render a 4-column Precision Systems bento SVG card from collected stats."""
+    if theme not in THEMES:
+        raise ValueError(f"Unsupported theme: {theme}")
 
-    <circle cx="6" cy="34" r="5" fill="#555555"/>
-    <text x="18" y="38" class="lang-name">C (Kernel/eBPF) <tspan class="lang-pct">30.1%</tspan></text>
+    c = THEMES[theme]
+    updated_date = str(stats["updated_utc"])[:10]
 
-    <circle cx="6" cy="62" r="5" fill="#89e051"/>
-    <text x="18" y="66" class="lang-name">Shell / Fish <tspan class="lang-pct">13.8%</tspan></text>
+    cards = [
+        {
+            "label": "UPSTREAM MERGED",
+            "value": str(stats["upstream_merged_prs"]),
+            "caption": "gdown · scapy",
+            "accent": c["emerald"],
+        },
+        {
+            "label": "UPSTREAM OPEN",
+            "value": str(stats["upstream_open_prs"]),
+            "caption": "j178/prek (Rust)",
+            "accent": c["amber"],
+        },
+        {
+            "label": "PUBLIC REPOS",
+            "value": str(stats["public_repos"]),
+            "caption": f"{stats['original_repos']} original · {stats['fork_repos']} forks",
+            "accent": c["blue"],
+        },
+        {
+            "label": "TOTAL STARS",
+            "value": str(stats["total_stars"]),
+            "caption": f"synced {updated_date}",
+            "accent": c["primary"],
+        },
+    ]
 
-    <!-- Col 2 -->
-    <circle cx="218" cy="6" r="5" fill="#f34b7d"/>
-    <text x="230" y="10" class="lang-name">C++ <tspan class="lang-pct">9.9%</tspan></text>
+    card_width = 214
+    card_height = 104
+    gap = 14
+    start_x = 1
+    card_y = 6
 
-    <circle cx="218" cy="34" r="5" fill="#f1e05a"/>
-    <text x="230" y="38" class="lang-name">HTML/CSS <tspan class="lang-pct">3.5%</tspan></text>
+    parts = [
+        (
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="900" height="116" '
+            f'viewBox="0 0 900 116" role="img" aria-labelledby="stats-title-{theme}">'
+        ),
+        f'  <title id="stats-title-{theme}">GitHub Stats Snapshot ({theme})</title>',
+    ]
 
-    <circle cx="218" cy="62" r="5" fill="#00ADD8"/>
-    <text x="230" y="66" class="lang-name">Go (Tunnel) <tspan class="lang-pct">2.5%</tspan></text>
-  </g>
-</svg>'''
+    for idx, item in enumerate(cards):
+        x = start_x + idx * (card_width + gap)
+        tx = x + 18
+        label = html.escape(item["label"])
+        value = html.escape(item["value"])
+        caption = html.escape(item["caption"])
+        accent = item["accent"]
+
+        parts.extend(
+            [
+                f'  <g>',
+                (
+                    f'    <rect x="{x}" y="{card_y}" width="{card_width}" '
+                    f'height="{card_height}" rx="10" fill="{c["card_bg"]}" stroke="{c["border"]}" />'
+                ),
+                f'    <circle cx="{tx + 4}" cy="{card_y + 22}" r="3.5" fill="{accent}" />',
+                (
+                    f'    <text x="{tx + 14}" y="{card_y + 26}" fill="{c["secondary"]}" '
+                    f'font-family="{FONT_MONO}" font-size="10.5" font-weight="600" '
+                    f'letter-spacing="1.1">{label}</text>'
+                ),
+                (
+                    f'    <text x="{tx}" y="{card_y + 64}" fill="{c["primary"]}" '
+                    f'font-family="{FONT_SANS}" font-size="28" font-weight="700">{value}</text>'
+                ),
+                (
+                    f'    <text x="{tx}" y="{card_y + 88}" fill="{c["muted"]}" '
+                    f'font-family="{FONT_MONO}" font-size="11">{caption}</text>'
+                ),
+                f'  </g>',
+            ]
+        )
+
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--username",
+        default=os.environ.get("GITHUB_REPOSITORY_OWNER", "jimi18102010-commits"),
+    )
+    parser.add_argument("--assets-dir", type=Path, default=Path("assets"))
+    parser.add_argument("--json-out", type=Path, default=Path("profile-stats.json"))
+    args = parser.parse_args()
+
+    stats = collect_stats(args.username)
+    dark_svg = render_stats_svg(stats, theme="dark")
+    light_svg = render_stats_svg(stats, theme="light")
+
+    args.assets_dir.mkdir(parents=True, exist_ok=True)
+    (args.assets_dir / "stats-dark.svg").write_text(dark_svg, encoding="utf-8")
+    (args.assets_dir / "stats-light.svg").write_text(light_svg, encoding="utf-8")
+    args.json_out.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
+    print(f"Updated stats-dark.svg, stats-light.svg, and {args.json_out} from GitHub REST API.")
+
 
 if __name__ == "__main__":
-    with open("stats.svg", "w") as f:
-        f.write(generate_stats_svg())
-
-    with open("languages.svg", "w") as f:
-        f.write(generate_languages_svg())
-
-    print("Created stats.svg and languages.svg successfully!")
+    main()
